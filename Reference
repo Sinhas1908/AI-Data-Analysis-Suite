@@ -1,0 +1,37 @@
+AI Data Analysis Suite – Reference Guide
+
+1. Project Overview 
+This project is an AI-powered **Data Analysis Suite** that supports **file uploads, AI-generated insights, speech-to-text, and exploratory data analysis (EDA).**  
+
+Features Overview**  
+| Feature | Description |
+|---------|------------|
+| File Upload| Supports CSV and Excel (XLSX) files |
+| AI Insights| Uses OpenAI API to analyze and summarize data |
+| Speech-to-Text| Converts voice input into actionable queries |
+| EDA Reports| Generates numerical and categorical summaries |
+| Text-to-Speech| Reads AI-generated insights aloud |
+
+Sample Data Format (DMart Data Store.xlsx)  
+Example dataset included in `/data/` folder:  
+
+| ID | Product | Category | Price | Quantity | Sales |  
+|----|---------|----------|--------|----------|-------|  
+| 1  | Laptop | Electronics | 45000 | 2 | 90000 |  
+| 2  | Shampoo | Grocery | 250 | 5 | 1250 |  
+
+API Usage – OpenAI Integration 
+The AI model used for insights is "GPT-4 Turbo", called via OpenAI’s API. The system prompt for analysis is:  
+
+"You are a senior data scientist. Analyze this dataset and provide insights based on user queries." 
+
+How to Use Speech-to-Text 
+- Record or upload an audio file (MP3, WAV, OGG).  
+- The system will transcribe it using OpenAI Whisper API.  
+- The transcribed text will be used as a query for AI analysis.  
+
+References & Documentation**  
+- [OpenAI API Docs](https://platform.openai.com/docs/)  
+- [Gradio UI Docs](https://gradio.app/docs/)  
+- [Pandas Data Analysis](https://pandas.pydata.org/docs/)  
+
